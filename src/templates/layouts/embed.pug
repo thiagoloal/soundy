@@ -1,0 +1,30 @@
+block variables
+doctype html
+html.no-scroll(lang="pt-br")
+	head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#")
+		meta(charset='UTF-8')
+		title #{pageTitle} - #{desk} - Folha de S.Paulo
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, shrink-to-fit=no')
+		include ../includes/meta-socialtags.pug
+		style(type='text/css', media='screen') .loading{position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:1001;text-align:center;display:flex;justify-content:center;align-items:center}.loader{border:12px solid #e0e0e0;border-radius:50%;border-top:12px solid #0078a4;width:100px;height:100px;-webkit-animation:spin .8s linear infinite;animation:spin .8s linear infinite}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0)}100%{-webkit-transform:rotate(360deg)}}@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.no-scroll{overflow:hidden}
+		link(rel='stylesheet', href='http://arte.folha.uol.com.br/library/folhastyle/2.0/css/folhastyle-min.css')
+		link(rel='stylesheet', href='css/main-boilerplate-graphics-special.css')
+
+	body.no-scroll
+		.loading
+			.loader
+
+		block content
+
+		footer
+			.container
+				.row
+					.col.col--s-1-1
+						p.copyright
+							small
+								| Copyright Folha de S.Paulo. Todos os direitos reservados. É proibida a reprodução do conteúdo desta página em qualquer meio de comunicação, eletrônico ou impresso, sem autorização escrita da Folhapress (
+								a(href='mailto:pesquisa@folhapress.com.br', target='_blank') pesquisa@folhapress.com.br
+								| ).
+
+		script(src="http://arte.folha.uol.com.br/library/template/barrafolha/2015/js/barrafolha.min.js")

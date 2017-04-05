@@ -1,0 +1,32 @@
+extend ../layouts/special
+
+append variables
+	- var section= 'editoria';
+	- var section_slug= 'editoria';
+	- var headline= 'nome do especial';
+	- var pageDescription= 'description';
+	- var url= 'http://arte.folha.com.br';
+	- var keywords= 'keywords';
+	- var chan= '';
+	- var share_title= headline;
+	- var share_type= 'article';
+	- var share_image= url + 'images/social.jpg';
+	- var share_description= lead;
+
+block content
+		#root
+			.oppening
+				.oppening--container
+					h1 Soundy.js
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut justo ac purus elementum ultricies porttitor nec mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nunc ac lacus faucibus consectetur vitae sit amet libero.
+						span.soundy(data-src='[{"type":"mp3", "url":"file.mp3"},{"type":"ogg", "url":"file.ogg"}]'   data-color='background-color'  data-bk='#fd3ff2') 
+							| Curabitur in finibus ex, id dapibus mi. Nam lacinia lacinia nisi id tempor. Phasellus luctus pretium arcu eu placerat.	||src: music.mp3 ||src: music.ogg ||color: #000 ||background: #fd3ff2 ||duration: 10s ||begin: 00:01:10
+
+						| Curabitur in finibus ex, id dapibus mi. Nam lacinia lacinia nisi id tempor. Phasellus luctus pretium arcu eu placerat. In id ante et enim mollis congue eu eu felis. Quisque viverra ornare risus, a mattis tellus fermentum ac.
+
+					//- p Vestibulum efficitur, ligula id sollicitudin interdum, quam nisl condimentum erat, eget euismod mi risus quis lectus. Phasellus vel risus vitae metus semper dignissim. In hendrerit ante nec est. Vivamus ringilla quis, tempus et dolor.
+					//- 	span.soundy(data-src='[{"type":"mp3", "url":"file.mp3"},{"type":"ogg", "url":"file.ogg"}]'   data-color='background-color'  data-bk='#4fdfae') (sadasdsadds) Curabitur in finibus ex, id dapibus mi. Nam lacinia lacinia nisi id tempor.euismod mi risus quis lectus. Phasellus vel risus vitae metus
+					//- 	| euismod mi risus quis lectus. Phasellus vel risus vitae metus semper dignissim. In hendrerit ante nec est. Vivamus ringilla quis, tempus et dolor.
+
+
+		script(src="js/main.js")
